@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaySlip.Api", "EmployeePaySlip.Api\EmployeePaySlip.Api.csproj", "{29AE616B-F9E8-48D3-9F16-C823866FBF2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaySlip.Business", "EmployeePaySlip.Business\EmployeePaySlip.Business.csproj", "{99FB898D-8FAA-4531-AB2B-997ED06939EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaySlip.DataAccess", "EmployeePaySlip.DataAccess\EmployeePaySlip.DataAccess.csproj", "{12916469-9484-4FF8-B4B3-911BB42CB10B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2278C922-1DAF-4E49-A352-9453DAE615E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaysSlip.Business.UnitTests", "EmployeePaysSlip.Business.UnitTests\EmployeePaysSlip.Business.UnitTests.csproj", "{E58A31D9-F7F8-4859-97C7-61CC8D94A620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePaySlip.Api.UnitTests", "EmployeePaySlip.Api.UnitTests\EmployeePaySlip.Api.UnitTests.csproj", "{F5476B3A-2C8C-483F-A885-F58A87916BBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29AE616B-F9E8-48D3-9F16-C823866FBF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29AE616B-F9E8-48D3-9F16-C823866FBF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29AE616B-F9E8-48D3-9F16-C823866FBF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29AE616B-F9E8-48D3-9F16-C823866FBF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99FB898D-8FAA-4531-AB2B-997ED06939EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99FB898D-8FAA-4531-AB2B-997ED06939EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99FB898D-8FAA-4531-AB2B-997ED06939EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99FB898D-8FAA-4531-AB2B-997ED06939EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12916469-9484-4FF8-B4B3-911BB42CB10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12916469-9484-4FF8-B4B3-911BB42CB10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12916469-9484-4FF8-B4B3-911BB42CB10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12916469-9484-4FF8-B4B3-911BB42CB10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58A31D9-F7F8-4859-97C7-61CC8D94A620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58A31D9-F7F8-4859-97C7-61CC8D94A620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58A31D9-F7F8-4859-97C7-61CC8D94A620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58A31D9-F7F8-4859-97C7-61CC8D94A620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5476B3A-2C8C-483F-A885-F58A87916BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5476B3A-2C8C-483F-A885-F58A87916BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5476B3A-2C8C-483F-A885-F58A87916BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5476B3A-2C8C-483F-A885-F58A87916BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E58A31D9-F7F8-4859-97C7-61CC8D94A620} = {2278C922-1DAF-4E49-A352-9453DAE615E3}
+		{F5476B3A-2C8C-483F-A885-F58A87916BBE} = {2278C922-1DAF-4E49-A352-9453DAE615E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A181C6A6-65A5-4B71-A0CF-2824044819DE}
+	EndGlobalSection
+EndGlobal

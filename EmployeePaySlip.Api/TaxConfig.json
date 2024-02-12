@@ -1,0 +1,29 @@
+{
+  "TaxRanges": [
+    {
+      "RangeStart": 0,
+      "RangeEnd": 14000,
+      "Rate": 0.105
+    },
+    {
+      "RangeStart": 14001,
+      "RangeEnd": 48000,
+      "Rate": 0.175
+    },
+    {
+      "RangeStart": 48001,
+      "RangeEnd": 70000,
+      "Rate": 0.3
+    },
+    {
+      "RangeStart": 70001,
+      "RangeEnd": 180000,
+      "Rate": 0.33
+    },
+    {
+      "RangeStart": 180001,
+      "RangeEnd": -1,
+      "Rate": 0.39
+    }
+  ]
+}
