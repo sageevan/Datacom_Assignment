@@ -1,3 +1,6 @@
+Steps to consider & follow 
+**************************
+
 1. Back-End Setup
    --------------
    * Dependecies to install 

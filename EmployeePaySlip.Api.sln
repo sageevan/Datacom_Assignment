@@ -15,6 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaysSlip.Business.U
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaySlip.Api.UnitTests", "EmployeePaySlip.Api.UnitTests\EmployeePaySlip.Api.UnitTests.csproj", "{F5476B3A-2C8C-483F-A885-F58A87916BBE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup and Assumptions", "Setup and Assumptions", "{6D03C70A-48F2-4ECE-BB49-3E5E956DFC4C}"
+	ProjectSection(SolutionItems) = preProject
+		Setup.txt = Setup.txt
+		Assumptions.txt = Assumptions.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
