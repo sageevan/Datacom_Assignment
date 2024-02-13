@@ -25,6 +25,11 @@ namespace EmployeePaySlip.Business
             {
                 if (annualSalary <= range.RangeEnd || range.RangeEnd == -1)
                 {
+                    if (range.RangeEnd == -1)
+                    {
+                        calculatedTax += (annualSalary - range.RangeStart + 1) * range.Rate;
+                        break;
+                    }
                     calculatedTax += (Math.Min(annualSalary, range.RangeEnd) - range.RangeStart + 1) * range.Rate;
                     break;
                 }

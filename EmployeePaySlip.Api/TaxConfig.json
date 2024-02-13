@@ -1,7 +1,7 @@
 {
   "TaxRanges": [
     {
-      "RangeStart": 0,
+      "RangeStart": 1,
       "RangeEnd": 14000,
       "Rate": 0.105
     },
