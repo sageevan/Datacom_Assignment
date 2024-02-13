@@ -19,6 +19,7 @@ Assumptions of front end development
  * Maintain the input and out put objects as JSON objects.
  * The problem does not need any external sources for the solution.
  * Used external resource to maitain the tax ranges and tax rates as object.
+ * Ranges in model assumed as every ranges starting in 1st number of the range (14001 - 48000)
  * Data access layer read the Json file and provide the tax ranges and rates to calculate the tax.
  * For future development if we need to change the tax rates or range then we do not have to do many changes in the code.
  * Business layer provide services to calculate tax, generate payslip and payperiod generating.
