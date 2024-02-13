@@ -23,6 +23,7 @@ Assumptions of front end development
  * For future development if we need to change the tax rates or range then we do not have to do many changes in the code.
  * Business layer provide services to calculate tax, generate payslip and payperiod generating.
  * Payperiod generator generates the period using the month of current year.
+ * Taxcalculater returns the value for a month.
  * DI implemented to all the services in business layer to decoupled the coding.
  * API controller is open for any access , that assume there is no authentication required for this problem.
  * Most of the unit cases developed in the back end.
