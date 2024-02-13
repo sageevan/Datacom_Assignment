@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using EmployeePaySlip.Business;
 using EmployeePaySlip.Business.Interfaces;
 using EmployeePaySlip.DataAccess;
+using EmployeePaySlip.DataAccess.Interfaces;
 using EmployeePaySlip.DataAccess.Entities;
 using Newtonsoft.Json;
 namespace EmployeePaySlip.Api
@@ -41,16 +42,10 @@ namespace EmployeePaySlip.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeePayslip.Api", Version = "v1" });
             });
 
-            
-            services.AddSingleton<List<TaxRange>>(provider =>
-            {
-                // Retrieve the tax ranges from your data source or configuration
-                return FetchTaxRangesFromConfiguration();
-            });
-
             services.AddTransient<ITaxCalculator, TaxCalculator>();
             services.AddTransient<IPaySlipGenerator, PaySlipGenerator>();
             services.AddTransient<IPayPeriodGenerator, PayPeriodGenerator>();
+            services.AddSingleton<ITaxRateDataStore, TaxRateDatastoreFromFile>();
 
         }
 
@@ -60,7 +55,6 @@ namespace EmployeePaySlip.Api
 
             if (env.IsDevelopment())
             {
-                //app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EmployeePayslip.Api v1"));
             }
@@ -77,20 +71,6 @@ namespace EmployeePaySlip.Api
             {
                 endpoints.MapControllers();
             });
-        }
-
-
-        // Adjust the FetchTaxRangesFromConfiguration method
-        private List<TaxRange> FetchTaxRangesFromConfiguration()
-        {
-            var taxConfigJsonPath = "TaxConfig.json";
-            var taxConfigJsonContent = File.ReadAllText(taxConfigJsonPath);
-
-            // Deserialize JSON to TaxRangesWrapper
-            var wrapper = JsonConvert.DeserializeObject<TaxRangesWrapper>(taxConfigJsonContent);
-
-            // Extract the TaxRanges property
-            return wrapper?.TaxRanges ?? new List<TaxRange>();
         }
     }
 }

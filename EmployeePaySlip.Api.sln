@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2278C922
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaysSlip.Business.UnitTests", "EmployeePaysSlip.Business.UnitTests\EmployeePaysSlip.Business.UnitTests.csproj", "{E58A31D9-F7F8-4859-97C7-61CC8D94A620}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePaySlip.Api.UnitTests", "EmployeePaySlip.Api.UnitTests\EmployeePaySlip.Api.UnitTests.csproj", "{F5476B3A-2C8C-483F-A885-F58A87916BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePaySlip.Api.UnitTests", "EmployeePaySlip.Api.UnitTests\EmployeePaySlip.Api.UnitTests.csproj", "{F5476B3A-2C8C-483F-A885-F58A87916BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

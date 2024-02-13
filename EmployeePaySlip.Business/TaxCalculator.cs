@@ -1,5 +1,6 @@
 ﻿using EmployeePaySlip.Business.Interfaces;
 using EmployeePaySlip.DataAccess.Entities;
+using EmployeePaySlip.DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace EmployeePaySlip.Business
     public class TaxCalculator : ITaxCalculator
     {
         private readonly List<TaxRange> taxRanges;
-        public TaxCalculator(List<TaxRange> taxRanges)
+        public TaxCalculator(ITaxRateDataStore taxRateDatastore)
         {
-            this.taxRanges = taxRanges;
+            this.taxRanges = taxRateDatastore.GetTaxRanges();
         }
         public double CalculateIncomeTax(int annualSalary)
         {

@@ -1,5 +1,7 @@
 ﻿using EmployeePaySlip.Business;
 using EmployeePaySlip.DataAccess.Entities;
+using EmployeePaySlip.DataAccess.Interfaces;
+using Moq;
 using Xunit;
 
 namespace EmployeePaysSlip.Business.UnitTests
@@ -15,8 +17,9 @@ namespace EmployeePaysSlip.Business.UnitTests
                 new TaxRange { RangeStart = 0, RangeEnd = 14000, Rate = 0.105 },
                 new TaxRange { RangeStart = 14001, RangeEnd = 48000, Rate = 0.175 },
             };
-
-            var taxCalculator = new TaxCalculator(taxRanges);
+            var mockTaxRangeDatastore = new Mock<ITaxRateDataStore>();
+            mockTaxRangeDatastore.Setup(m => m.GetTaxRanges()).Returns(taxRanges);
+            var taxCalculator = new TaxCalculator(mockTaxRangeDatastore.Object);
 
             // Act
             var incomeTax = taxCalculator.CalculateIncomeTax(60000);
