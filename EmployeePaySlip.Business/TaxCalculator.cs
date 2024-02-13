@@ -16,6 +16,7 @@ namespace EmployeePaySlip.Business
         {
             this.taxRanges = taxRateDatastore.GetTaxRanges();
         }
+        //Returns the value for a month
         public double CalculateIncomeTax(int annualSalary)
         {
             double calculatedTax = 0;

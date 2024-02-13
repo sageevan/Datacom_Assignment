@@ -1,0 +1,34 @@
+Assumptions of front end development
+------------------------------------
+ * Inputs 
+    **Annual Salary is positive integer
+    **Super Rate is a valid numeric value (0-50)
+    **Pay period is the range of a month (1st Jan - 31st Jan)
+    **Firstname and Lastname contain letters only
+ * Input and output objects are JSON objects.
+ * Months are getting from Json file rather than implements in the code.
+ * Tests, Services and Employee classes are seperated for maintain the structure.
+ * Api call can be implemented in ApiCallService for future implementation( GET, PUT, DELETE).
+ * Important test cases have been developed and still many of them can be developed.
+ * As most of them are similar cases, some of them were developed.
+ * Used jest for testing.
+
+ Assumptions of back end development
+------------------------------------
+ * All calculated values are rounded into two decimals. 
+ * Maintain the input and out put objects as JSON objects.
+ * The problem does not need any external sources for the solution.
+ * Used external resource to maitain the tax ranges and tax rates as object.
+ * Data access layer read the Json file and provide the tax ranges and rates to calculate the tax.
+ * For future development if we need to change the tax rates or range then we do not have to do many changes in the code.
+ * Business layer provide services to calculate tax, generate payslip and payperiod generating.
+ * Payperiod generator generates the period using the month of current year.
+ * DI implemented to all the services in business layer to decoupled the coding.
+ * API controller is open for any access , that assume there is no authentication required for this problem.
+ * Most of the unit cases developed in the back end.
+ * Used xunit for testing.
+
+
+ Overall
+ --------
+ * Frond end and Back end are different modules and no authentication required for access.

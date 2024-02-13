@@ -1,4 +1,4 @@
-import {postItem } from '../services/restCallService.js';
+import { postItem } from '../services/apiClientService.js';
 import axios from 'axios';
 
 jest.mock('axios', () => ({
@@ -41,7 +41,7 @@ describe('postItem', () => {
     });
 
 
-    it('post successfully data to API', async () => {
+    it('post successfully data to API and return the expected object', async () => {
 
         axios.post.mockImplementationOnce(() => Promise.resolve(expectedPaySlip));
 

@@ -1,8 +1,9 @@
 import './App.css'
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Alert,Container, Row, Col} from 'react-bootstrap'
 import React, { useState, useEffect } from 'react'
-import { postItem } from './services/restCallService.js';
+import { postItem } from './services/apiClientService.js';
 import EmployeeDetailsForm from './employee/employeeDetailsForm'; 
 import EmployeePaySlip from './employee/employeePaySlip'; 
 import EmployeeValidator from './employee/employeeValidator';
@@ -28,7 +29,7 @@ const App = () => {
                 const response = await axios.get('months.json'); // Adjust the path as needed
                 setMonths(response.data);
             } catch (error) {
-                console.error('Error fetching months:', error.message);
+                setNotification('Error fetching months:', error.message);
             }
         };
         fetchMonths();
@@ -44,6 +45,7 @@ const App = () => {
             ...prevData,
             [id]: value,
         }));
+        setNotification('');
     };
 
 
@@ -60,12 +62,9 @@ const App = () => {
                     setPaySlip(res.data);
                 })
                 .catch((error) => {
-                    setNotification('Error : Request to get pay slip has been failed!' + error.message)
-                });
-
-            setNotification('')
+                    setNotification('Error : Request to get pay slip has been failed!' , error.message)
+                });            
         }
-
     }
 
     // Implement logic for handling the "Clear" button click
@@ -101,7 +100,7 @@ const App = () => {
                 <h4>Employee Details</h4>
                 <br />
                 {notification &&
-                    <Alert variant="danger">{notification}</Alert>
+                        <Alert variant="danger">{notification}</Alert>
                 }
                 <Row className="4">
                     <Col><EmployeeDetailsForm

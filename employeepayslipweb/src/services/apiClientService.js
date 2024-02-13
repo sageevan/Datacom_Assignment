@@ -9,5 +9,3 @@ export const postItem = async (item) => {
 
     return response;
 };
-
-//Here we can implement put , delete , get methos if we need to

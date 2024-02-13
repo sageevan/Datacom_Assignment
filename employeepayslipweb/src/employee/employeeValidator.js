@@ -3,6 +3,15 @@ class EmployeeValidator {
         const nameRegex = /^[A-Za-z]+$/;
         const integerRegex = /^\d+$/;
 
+        // Validate emmpty fields
+        if (employee.firstName === null || employee.firstName === "" ||
+            employee.lastName === null || employee.lastName === "" ||
+            employee.annualSalary === null || employee.annualSalary === "" ||
+            employee.payPeriod === null || employee.payPeriod === "" ||
+            employee.superRate === null || employee.superRate === "") {
+            return "Required fields cannot be empty!.";
+            }
+
         // Validate first name
         if (!nameRegex.test(employee.firstName)) {
             return "First name should contain only letters.";
@@ -11,11 +20,6 @@ class EmployeeValidator {
         // Validate last name
         if (!nameRegex.test(employee.lastName)) {
             return "Last name should contain only letters.";
-        }
-
-        // Validate month
-        if (employee.payPeriod === null || employee.payPeriod === "") {
-            return "Month is required.";
         }
 
         // Validate super rate

@@ -42,6 +42,7 @@ namespace EmployeePaySlip.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeePayslip.Api", Version = "v1" });
             });
 
+            // Dependecy Injections
             services.AddTransient<ITaxCalculator, TaxCalculator>();
             services.AddTransient<IPaySlipGenerator, PaySlipGenerator>();
             services.AddTransient<IPayPeriodGenerator, PayPeriodGenerator>();
