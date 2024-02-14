@@ -23,14 +23,9 @@ namespace EmployeePaySlip.Business
 
             foreach (var range in taxRanges)
             {
-                if (range.RangeEnd == -1)
+                if (range.RangeEnd == -1 || annualSalary <= range.RangeEnd)
                 {
                     calculatedTax += (annualSalary - range.RangeStart + 1) * range.Rate;
-                    break;
-                }
-                else if (annualSalary <= range.RangeEnd || range.RangeEnd == -1)
-                {
-                    calculatedTax += (Math.Min(annualSalary, range.RangeEnd) - range.RangeStart + 1) * range.Rate;
                     break;
                 }
                 else
